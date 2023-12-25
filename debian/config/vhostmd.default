@@ -1,0 +1,2 @@
+VHOSTMD_CONFIG=/etc/vhostmd/vhostmd.conf
+VHOSTMD_URI=qemu:///system

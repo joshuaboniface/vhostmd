@@ -1,0 +1,15 @@
+[Unit]
+Description=Virtualizaton information interface
+After=libvirtd.service
+
+[Service]
+EnvironmentFile=-/etc/default/vhostmd
+ExecStart=/usr/sbin/vhostmd --config $VHOSTMD_CONFIG --connect $VHOSTMD_URI
+ExecReload=/bin/kill -HUP $MAINPID
+Type=forking
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=vhostmd.service

@@ -1,0 +1,10 @@
+debian/config/vhostmd.default /etc/default
+debian/config/vhostmd.conf /etc/vhostmd
+
+usr/sbin/vhostmd /usr/sbin
+usr/lib/systemd/system/vhostmd.service /lib/systemd/system
+etc/vhostmd/metric.dtd /etc/vhostmd
+etc/vhostmd/vhostmd.dtd /etc/vhostmd
+usr/share/doc/vhostmd /usr/share/doc
+usr/share/man/man8/vhostmd.8 /usr/share/man/man8
+usr/share/vhostmd/scripts/pagerate.pl /usr/share/vhostmd/scripts

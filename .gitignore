@@ -26,3 +26,13 @@ test/test_dyn
 test/test_static
 vhostmd/vhostmd
 vm-dump-metrics/vm-dump-metrics
+# Debian build exclusions
+debian/.debhelper
+debian/tmp
+debian/files
+debian/autoreconf.*
+debian/debhelper-build-stamp
+debian/*.debhelper
+debian/*.substvars
+debian/vhostmd
+debian/vm-dump-metrics

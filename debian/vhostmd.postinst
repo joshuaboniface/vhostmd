@@ -1,0 +1,6 @@
+#!/bin/sh
+
+systemctl enable --now vhostmd
+
+#DEBHELPER#
+exit 0

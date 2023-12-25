@@ -1,0 +1,23 @@
+Source: vhostmd
+Maintainer: Joshua M. Boniface <joshua@boniface.me>
+Section: admin
+Priority: optional
+Standards-Version: 4.6.0
+Build-Depends: libxml2-dev
+Vcs-Git: https://github.com/vhostmd/vhostmd.git
+Vcs-Browser: https://github.com/vhostmd/vhostmd
+
+Package: vhostmd
+Architecture: any
+Depends: 
+Description: hypervisor metrics channel utility
+ vhostmd provides a "metrics communication channel" between a host and
+ its hosted virtual machines, allowing limited introspection of host
+ resource usage from within virtual machines.
+
+Package: vm-dump-metrics
+Architecture: any
+Depends: 
+Description: hypervisor metrics channel utility, client utility
+ Stand alone static utility will read all the metrics and write them
+ to stdout or optionally an argumented file.
