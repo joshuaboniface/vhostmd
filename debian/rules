@@ -6,4 +6,4 @@ export DH_VERBOSE=1
 	dh $@
 
 override_dh_auto_configure:
-	./configure --prefix=/usr --libdir=/usr/lib64 --disable-shared
+	./configure --prefix=/usr --libdir=/usr/lib64 --without-xenstore --disable-shared
