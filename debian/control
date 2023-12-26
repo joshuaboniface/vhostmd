@@ -17,7 +17,7 @@ Description: hypervisor metrics channel utility
 
 Package: vm-dump-metrics
 Architecture: any
-Depends: 
+Depends: libxml2
 Description: hypervisor metrics channel utility, client utility
  Stand alone static utility will read all the metrics and write them
  to stdout or optionally an argumented file.
