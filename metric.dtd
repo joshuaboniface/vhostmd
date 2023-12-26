@@ -15,7 +15,6 @@ Metric DTD
           context (host|vm) #REQUIRED
           id CDATA #IMPLIED
           uuid CDATA #IMPLIED
-          unit CDATA #IMPLIED
 >
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT value (#PCDATA)>

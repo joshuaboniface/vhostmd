@@ -51,7 +51,6 @@ typedef struct _metric {
    char *action;
    char *type_str;
    int cnt;
-   char *unit;
    metric_context ctx;
    metric_type type;
    metric_func pf;

@@ -285,11 +285,6 @@ static int parse_group_metric(xmlDocPtr xml ATTRIBUTE_UNUSED,
       }
       vu_append_string(&mdef->type_str, prop);
       free(prop);
-
-      if ((prop = xmlGetProp(n, BAD_CAST "unit"))) {
-          vu_append_string(&mdef->unit, prop);
-          free(prop);
-      }
    }
    ret = 0;
 error:
@@ -307,7 +302,6 @@ static metric *parse_metric(xmlDocPtr xml, xmlXPathContextPtr ctxt, xmlNodePtr n
    xmlNodePtr cur;
    xmlChar *mtype = NULL;
    xmlChar *mcontext = NULL;
-   xmlChar *munit = NULL;
    xmlChar *str;
 
    mdef = calloc(1, sizeof(metric));
@@ -343,12 +337,7 @@ static metric *parse_metric(xmlDocPtr xml, xmlXPathContextPtr ctxt, xmlNodePtr n
                   "supported contexts (host) and (vm)", mcontext);
       goto error;
    }
-
-   /* Get the metric unit attribute */
-   if ((munit = xmlGetProp(node, BAD_CAST "unit"))) {
-       mdef->unit = strdup((char *)munit);
-   }
-
+      
    /* Get the metric name and the action */
    cur = node->xmlChildrenNode;
 
@@ -388,7 +377,6 @@ static metric *parse_metric(xmlDocPtr xml, xmlXPathContextPtr ctxt, xmlNodePtr n
 
    free(mtype);
    free(mcontext);
-   free(munit);
 
    return mdef;
    
@@ -401,7 +389,6 @@ static metric *parse_metric(xmlDocPtr xml, xmlXPathContextPtr ctxt, xmlNodePtr n
    }
    free(mtype);
    free(mcontext);
-   free(munit);
    
    return NULL;
 }
